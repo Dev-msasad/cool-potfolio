@@ -1,0 +1,1349 @@
+/*
+  Project Name: Palun - Dark Personal Portfolio HTML5 Template
+  Author: wpsmasher
+  Support: support@wpsmasher.com
+  Description: Personal Portfolio Bootstrap 4 and HTML5 Template
+  Version: 1.0
+*/
+
+
+/* CSS Index 
+-----------------------------------
+1. Theme default css
+2. Header Area
+3. Slider Area
+4. Services Area
+5. Counter Area
+6. Portfolio Area
+7. Blog Area
+8. Contact Area
+9. Copyright Area
+10. Blog Area
+11. News Details Area
+12. Responsive
+
+*/
+
+
+/* --------------- 1. Theme default css ---------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  transition: 1 ease;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  max-width: 1920px;
+  background-color: #2e2e35;
+  color: #dadada;
+  margin: 0 auto;
+}
+
+.img {
+  max-width: 100%;
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  height: auto;
+}
+
+.fix {
+  overflow: hidden;
+}
+
+a {
+  -webkit-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  color: #b8b7b7;
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover,
+.portfolio-cat a:hover,
+.footer -menu li a:hover {
+  color: #e4aa48;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  color: #dadada;
+  font-weight: 700;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+}
+
+h1 {
+  font-size: 50px;
+  font-weight: 800;
+  line-height: 60px;
+}
+
+h2 {
+  font-size: 35px;
+  line-height: 45px;
+  color: #dadada;
+}
+
+h3 {
+  font-size: 14px;
+  font-family: "Open Sans";
+  color: #e4aa48;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+h6 {
+  font-size: 16px;
+}
+
+ul {
+  margin: 0px;
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #959595;
+  margin-bottom: 20px;
+  font-family: 'Nunito', sans-serif;
+
+}
+
+.dash {
+  width: 40px;
+  height: 2px;
+  background: #e4aa48;
+}
+
+.pc {
+  color: #e4aa48;
+}
+
+.bgp {
+  background: #2e2e35;
+}
+
+.bgs {
+  background: #34343b;
+}
+
+.vc {
+  height: 27px;
+  width: 3px;
+  background: #dadada;
+  display: inline-block;
+  margin-left: 14px;
+  margin-right: 14px;
+  margin-bottom: -7px;
+}
+
+.ct-btn {
+  text-transform: uppercase;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #e4aa48;
+  border: 2px solid #e4aa48;
+  width: 150px;
+  height: 50px;
+  line-height: 46px;
+  letter-spacing: .12em;
+  text-align: center;
+  display: inline-block;
+}
+
+.ct-btn:hover {
+  background: #e4aa48;
+  color: #000;
+  transition: .3s ease-out;
+}
+
+.mr-btn {
+  font-size: 14px;
+  line-height: 24px;
+  color: #e4aa48;
+  display: inline-block;
+
+}
+
+
+.section-title h2 {
+  margin-bottom: 11px;
+}
+
+.section-title p {
+  margin-bottom: 13px;
+}
+
+.btn-animation{
+  position: relative;
+}
+
+.btn-animation::after{
+  position: absolute;
+  content: "";
+  top: 110%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e4aa48;
+  transform: scaleX(0);
+  transition: transform .5s;
+  transform-origin: right;
+}
+
+.btn-animation:hover::after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+
+/* pseudo classes */
+*::-moz-selection {
+  background: #fff;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: #fff;
+  text-shadow: none;
+}
+
+::selection {
+  background: #fff;
+  text-shadow: none;
+}
+
+*::-webkit-input-placeholder {
+  color: #949494;
+  font-size: 26px;
+  text-align: center;
+}
+
+*:-ms-input-placeholder {
+  color: #949494;
+  font-size: 26px;
+  text-align: center;
+}
+
+*::placeholder {
+  color: #b5b5b5;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+
+*::focus {
+  outline: none;
+}
+
+*::active {
+  outline: none;
+}
+
+*::-moz-focus {
+  outline: none;
+}
+
+
+/* -----------------  2. Header Area -------------- */
+
+.menu-area ul li {
+  margin-right: 38px !important;
+
+}
+
+.menu-area ul li a {
+  font-size: 16px;
+  position: relative;
+
+}
+
+.menu-area ul li a:after {
+  position: absolute;
+  content: "";
+  top: 110%;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #e4aa48;
+  transform: scaleX(0);
+  transition: transform .5s;
+  transform-origin: right;
+}
+
+.menu-area ul li a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.menu-area ul li:hover:after {
+  margin: 3px auto;
+  display: block;
+  width: 16px;
+
+}
+
+.menu-area ul li a:hover,
+.menu-area ul li a:focus {
+  text-decoration: none;
+}
+
+.menu-area ul li:last-child {
+  margin-right: 15px !important;
+}
+
+.menu-area .sub-menu {
+  position: absolute;
+  line-height: 38px;
+  z-index: 3;
+  background-color: #434346;
+}
+
+.menu-area .sub-menu {
+  display: none;
+}
+
+.menu-area ul li:hover .sub-menu {
+  display: block;
+}
+
+
+
+.menu-area.menu-social ul li:after {
+  display: none;
+}
+
+.menu-social {
+  border-left: 2px solid #737377;
+}
+
+.menu-social ul li {
+  margin-right: 10px !important;
+}
+
+.menu-social ul li:last-child {
+  margin-right: 0px;
+}
+
+
+/* -----------------  3. Slider Area -------------- */
+
+.slider-height {
+  height: 738px;
+}
+
+.slider-left .dash {
+  margin-top: 31px;
+  margin-bottom: 14px;
+}
+
+.social-links {
+  font-size: 14px;
+  line-height: 14px;
+}
+
+.social-links a {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.slick-dots > :not(.slick-active) {
+	display: none;
+}
+
+.slick-dots li button {
+	background: transparent;
+	border: none;
+	color: #959595;
+	font-family: 'Open sans',sans-serif;
+	font-size: 23px;
+	font-weight: 800;
+}
+
+.slider-activator .slick-arrow {
+	background: transparent;
+	border: none;
+	font-size: 25px;
+	position: absolute;
+	right: 5%;
+	top: 80%;
+  color: #959595;
+  z-index: 9999;
+}
+
+.slick-arrow:focus,
+.slick-arrow:visited:focus,
+.slick-arrow:active:focus {
+	outline: none;
+}
+
+
+
+.slick-prev.slick-prev {
+	right: 10%;
+}
+
+.slick-dots .slick-active {
+	position: absolute;
+	top: 80%;
+	right: 7.7%;
+}
+
+/* -------------------- 4. Services Area --------------- */
+.project-card {
+  height: 285px;
+}
+
+.project-card:hover .skill-project h4,
+.project-card:hover .skill-project p {
+  color: #e4aa48;
+  transition: .3s all ease;
+}
+
+.project-card:hover .icon>img:first-child {
+  display: none;
+}
+
+.project-card:hover .icon>img:last-child {
+  display: inline-block !important;
+  text-align: center;
+}
+
+
+/* --------- 5. Counter Area -------------- */
+.counter-item h4 {
+  font-size: 35px;
+}
+
+/* --------- 6. Portfolio Area ----------- */
+.pofo-cat {
+  position: relative;
+}
+
+.pofo-cat button {
+  background: transparent;
+  color: #959595;
+  font-weight: 700;
+  font-size: 14px;
+  border: none;
+  padding: 20px;
+  border-bottom: 2px solid transparent;
+}
+
+.pofo-cat button:hover {
+  color: #e4aa48;
+}
+
+.pofo-cat .active {
+  border: none;
+  color: #e4aa48;
+  border-bottom: 2px solid #e4aa48;
+}
+
+.pofo-cat button:focus,
+.pofo-cat button:active {
+  outline: none;
+  text-indent: 0;
+}
+
+.pofo-line {
+	background: #d6d6d6;
+	height: 2px;
+	position: absolute;
+	top: 60%;
+	left: 62px;
+	width: 84%;
+	z-index: -1;
+}
+
+
+.portfolio-thumb img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.portfolio-thumb img:after {
+  clear: both;
+}
+
+.portfolio-wrapper {
+  position: relative;
+}
+
+.portfolio-wrapper .overlay {
+  width: 80%;
+  height: 80%;
+  top: 50%;
+  bottom: 0;
+  left: 50%;
+  position: absolute;
+  background: #2e2e35;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: .5s ease;
+}
+
+.portfolio-wrapper:hover .overlay {
+  opacity: 1;
+}
+
+.portfolio-wrapper .overlay img {
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+.grid-item:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+/* ------- 7. Blog Area -------- */
+
+.single-blog {
+  position: relative;
+  background: #2e2e34;
+}
+
+.blog-img,
+.blog-small-img{
+  overflow: hidden;
+}
+
+.blog-img img {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: relative;
+  transition: .3s all ease;
+}
+
+.blog-small-img img{
+  transition: .3s all ease;
+}
+
+.blog-img img:hover,
+.blog-small-img img:hover{
+  transform: scale(1.2);
+}
+
+
+
+.blog-meta .date {
+  background: rgba(0.18, 0.18, 0.21);
+  width: 100px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #e4aa48;
+  font-weight: 800;
+  position: absolute;
+  top: 0;
+}
+
+.blog-title a h2 {
+  font-size: 22px;
+  line-height: 32px;
+  transition: .3s ease;
+}
+
+.blog-title a h2:hover {
+  color: #e4aa48;
+}
+
+.blog-button a {
+  font-size: 14px;
+  color: #e4aa48;  
+  position: relative;
+}
+
+.blog-button a:after{
+  position: absolute;
+  content: "";
+  top: 110%;
+  left: 0;
+  width: 95%;
+  height: 2px;
+  background: #e4aa48;
+  transform: scaleX(0);
+  transition: transform .5s;
+  transform-origin: right;
+}
+
+.blog-button a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.single-blog .play-btn {
+  position: absolute;
+  top: 21%;
+  left: 50%;
+  border: 2px solid #e4aa48;
+  background: #2e2e34;
+  width: 80px;
+  height: 80px;
+  line-height: 78px;
+  text-align: center;
+  border-radius: 50%;
+  color: #e4aa48;
+  transform: translate(-50%, -50%);
+}
+
+.blog-item-small {
+  background: #2e2e34;
+  overflow: hidden;
+  position: relative;
+}
+
+.blog-small-description h2 {
+  font-size: 16px;
+  line-height: 26px;
+  color: inherit;
+}
+
+
+.blog-small-description p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #959595;
+  margin-bottom: 0;
+}
+
+.news-area hr {
+  border: 1px solid #434346;
+  margin: 15px 0;
+}
+
+/* ----------- 8. Contact Area --------- */
+
+.contact-item {
+  background: #36363e;
+  height: 60px;
+  line-height: 60px;
+}
+
+.ct-item-icon i {
+  font-size: 23px;
+  line-height: 60px;
+}
+
+.contact-item a {
+  font-size: 18px;
+  color: #e4aa48;
+  font-weight: 600;
+}
+
+
+/* ------------ 9. Copyright Area ---------- */
+.footer-area {
+  position: relative;
+}
+
+.copyright-text {
+  border-top: 2px solid #e4aa48;
+}
+
+.back-to-top {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+}
+
+
+.back-to-top a {
+  border: 3px solid #e4aa48;
+  width: 50px;
+  height: 50px;
+  line-height: 46px;
+  display: inline-block;
+  text-align: center;
+  color: #e4aa88;
+}
+
+
+.back-to-top a:hover {
+  background: #e4aa48;
+  color: #fff;
+  text-decoration: underline;
+}
+
+
+/* ================= Blog List Page ================== */
+
+/* ------------ 10. Blog Area --------- */
+.page-title h1 {
+	font-size: 35px;
+	line-height: 40px;
+}
+
+.blog-section .title{
+  position: relative;
+}
+
+.blog-section .title h2 {
+  font-size: 25px;
+}
+
+.blog-section .title .dash {
+	width: 80%;
+	height: 4px;
+	position: absolute;
+	top: 22px;
+	left: 20%;
+}
+
+.list-blog-item{
+  position: relative;
+}
+
+.list-blog-img{
+  overflow: hidden;
+}
+
+.list-blog-img img{
+  width: 100%;
+  height: auto;
+  transition: .3s ease;
+}
+
+.list-blog-img img:hover{
+  transform: scale(1.1);
+}
+
+.list-blog-item .date{
+  position: absolute;
+  background-color: rgba(46, 46, 53,.6);
+  height: 40px;
+  width: 130px;
+  text-align: center;
+  top: 0;
+}
+
+.list-blog-meta .date > p {
+	color: #e4aa48;
+	font-weight: 800;
+	line-height: 40px;
+	font-family: 'Open sans',sans-serif;
+}
+
+.list-blog-detail a h2 {
+	font-size: 22px;
+  line-height: 32px;
+  color: inherit;
+}
+
+.list-blog-detail p {
+	font-size: 16px;
+	line-height: 26px;
+}
+
+.list-blog-item .play-btn {
+	position: absolute;
+	top:50%;
+	left: 50%;
+	border: 2px solid #e4aa48;
+	background: #2e2e34;
+	width: 80px;
+	height: 80px;
+	line-height: 78px;
+	text-align: center;
+	border-radius: 50%;
+	color: #e4aa48;
+	transform: translate(-50%, -50%);
+}
+
+.email-input form input[type='email'] {
+	width: 100%;
+	border: none;
+	height: 60px;
+	line-height: 60px;
+  border-bottom: 3px solid #e4aa48;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #e4aa48;
+  text-align: center;
+}
+
+.email-input form input::placeholder{
+  text-align: center;
+  color: #949494;
+
+}
+
+.email-input .ct-btn {
+	text-transform: uppercase;
+	font-family: 'Nunito', sans-serif;
+	font-size: 14px;
+	background: transparent;
+	color: #e4aa48;
+	border: 2px solid #e4aa48;
+	width: 150px;
+	height: 50px;
+	line-height: 46px;
+	letter-spacing: .12em;
+	text-align: center;
+	display: block;
+	margin: 40px auto;
+}
+
+.email-input .ct-btn:hover{
+  background: #e4aa48;
+  color: #000;
+  transition: .3s ease-out;
+}
+
+.newsletter-area .social-links a{
+  font-size: 18px;
+}
+
+
+/* =============== News Details Page ============== */
+
+/* -------------- 11. News Details Area ----------- */
+
+.news-details img{
+  width: 100%;
+  height: auto;
+}
+
+.news-details h2 {
+	font-size: 25px;
+	line-height: 35px;
+}
+
+.blockquote {
+	background: #2e2e34;
+	padding: 50px 60px;
+  font-size: 60px;
+  line-height: 40px;
+}
+
+.speech {
+	font-size: 40px;
+	font-family: 'Open sans',sans-serif;
+	font-weight: 300;
+	line-height: 50px;
+}
+
+.blockquote-footer {
+	color: #959595;
+	font-size: 30px;
+	font-style: italic;
+}
+
+.main-area hr{
+  border: 1px solid #4f4f4f;
+}
+
+.news-meta h4 {
+	margin-bottom: 20px;
+	font-size: 18px;
+}
+.news-social ul li a {
+	margin-right: 10px;
+}
+
+.news-social ul li:last-child a{
+  margin-right: 0;
+}
+
+.tags ul li a {
+	font-size: 12px;
+	font-family: 'Nunito',sans-serif;
+	text-align: center;
+	background: #2e2e34;
+	padding: 10px 20px;
+}
+
+.row.nav-buttons a {
+	font-size: 18px;
+	margin-bottom: 0px;
+	display: block;
+}
+
+
+
+/* -------------- 12. Responsive  --------- */
+
+/* Normal desktop :1200px. */
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .grid-item-4 {
+    padding-right: 15px !important;
+  }
+
+  .slick-prev.slick-prev {
+    right: 10%;
+  }
+}
+
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .menu-area ul li {
+    margin-right: 18px !important;
+  }
+
+  .slider-activator .slick-arrow {
+    top: 90%;
+  }
+
+  .slick-dots .slick-active {
+    top: 90%;
+  }
+
+  
+  .slick-prev.slick-prev {
+    right: 10%;
+  }
+
+  .project-card {
+    height: 230px;
+    padding: 40px 0 10px 0;
+  }
+
+  .skill-project h4 {
+    font-size: 17px;
+    line-height: 17px;
+  }
+
+  .grid-item-4 {
+    padding-right: 12px;
+  }
+
+  .blog-title a h2 {
+    font-size: 18px;
+    line-height: 28px;
+    transition: .3s ease;
+  }
+
+  .blog-item-small:last-child {
+    display: none;
+  }
+
+  .blog-small-description {
+    padding: 40px 0 30px 20px;
+  }
+
+  .blog-small-img {
+    margin-right: 10px;
+    display: none;
+  }
+
+  .single-blog .play-btn {
+    top: 17%;
+  }
+
+  .ct-item-icon {
+    margin-left: 20px;
+    margin-right: 10px;
+  }
+
+  /* blog list */
+
+  .list-blog-detail p:not(:first-of-type) {
+    display: none;
+  }
+
+  .list-blog-detail {
+    padding: 50px 20px 0 0;
+  }
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+  .slide-item>.container {
+    padding-top: 60px;
+  }
+
+  .name h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+
+  .section-title h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  .slick-dots .slick-active {
+    top: 90.5%;
+    right: 8%;
+  }
+
+  .slick-dots li button {
+    font-size: 16px;
+  }
+
+  .slider-activator .slick-arrow {
+    top: 90%;
+    font-size: 20px;
+  }
+
+  .slick-prev.slick-prev {
+    right: 10%;
+  }
+
+  .services-area {
+    padding-top: 70px;
+  }
+
+  .service-row .col-md-3 {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  .project-card .icon img {
+    width: 30%;
+  }
+
+  .project-card {
+    height: 200px;
+    padding: 30px 0 10px 0;
+    border-right: 1px solid #434346;
+    border-left: 1px solid #434346;
+  }
+
+  .counter-area {
+    padding-bottom: 30px;
+  }
+
+  .portfolio-area {
+    padding: 65px 0 40px 0;
+  }
+
+  .news-area {
+    padding: 65px 0 0;
+  }
+
+  .single-blog .play-btn {
+    top: 32%;
+
+  }
+
+  .blog-small-description h2 {
+    font-size: 18px;
+    line-height: 28px;
+    color: inherit;
+  }
+
+  .contact-area {
+    padding-top: 70px;
+  }
+
+  .grid-item-4 {
+    padding-right: 9px;
+  }
+
+  .pofo-cat button.active {
+    border-bottom: 4px solid #e4aa48;
+  }
+
+  /* portfolio details */
+  .main-area {
+    padding: 60px 0;
+  }
+
+  .project-gallery {
+    margin-bottom: 40px;
+  }
+
+  .newsletter-area {
+    padding-top: 60px;
+  }
+
+  .email-input {
+    margin-top: 40px;
+  }
+
+  /* blog list */
+ 
+  .blog-section .title .dash {
+    width: 70%;
+    left: 30%;
+  }
+
+  .blog-post-area {
+    padding: 60px 0;
+  }
+
+  .list-blog-detail {
+    padding: 50px;
+  }
+}
+
+/* small mobile :320px. */
+@media (max-width: 767px) {
+  .slide-item>.container {
+    padding-top: 60px;
+  }
+
+  .slick-prev.slick-prev {
+    right: 15%;
+  }
+
+  .slider-activator .slick-arrow {
+    top: 90%;
+  }
+
+  .slick-dots .slick-active {
+    top: 90%;
+    right: 10.7%;
+  }
+
+  .into-area {
+    display: none;
+  }
+
+  .mobile-menu {
+    right: -60px;
+    top: 12px;
+  }
+
+  .menu-area .sub-menu {
+    line-height: 1.5;
+    position: inherit;
+  }
+
+  .menu-social {
+    padding-top: 7px;
+    border: none;
+    position: relative;
+    z-index: 999999;
+  }
+
+  .menu-social ul li a>i {
+    font-size: 22px;
+  }
+
+  .name h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+
+  .section-title h2 {
+    margin-bottom: 11px;
+    font-size: 26px;
+    line-height: 36px;
+  }
+
+  .slider-area-intro{
+    padding: 50px 0;
+  }
+
+  .pofo-line{
+    display: none;
+  }
+
+  .services-area {
+    padding-top: 70px;
+  }
+
+  .portfolio-area {
+    padding: 65px 0 40px 0;
+  }
+
+  .news-area {
+    padding: 65px 0 0;
+  }
+
+  .single-blog .play-btn {
+    top: 25%;
+    
+  }
+
+  .counter-area{
+    padding-bottom: 30px;
+  }
+
+  .contact-area {
+    padding-top: 70px;
+  }
+
+  /* portfolio details */
+  .main-area {
+    padding: 60px 0;
+  }
+
+  .project-gallery {
+    margin-bottom: 40px;
+  }
+
+  .newsletter-area {
+    padding-top: 60px;
+  }
+
+  .email-input {
+    margin-top: 40px;
+  }
+
+  .list-inline-item:not(:last-child) {
+    margin-right: 1px;
+  }
+
+  .back-to-top {
+    position: absolute;
+    bottom: 70px;
+    right: 30px;
+  }
+
+  /* news details */
+  .speech {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .blockquote-footer {
+   font-size: 16px;
+  }
+
+  /* blog list */
+  .blog-section .title .dash {
+    width: 60%;
+    left: 40%;
+  }
+
+  .list-blog-detail {
+    padding: 30px;
+  }
+
+  .list-blog-item {
+    margin-top: 30px;
+  }
+
+}
+
+/* Large Mobile :480px. */
+@media only screen and (min-width: 480px) and (max-width: 575px) {
+  .logo-area{
+    padding-left: 15px;
+  }
+
+  .slider-activator .slick-arrow {
+    top: 90%;
+  }
+
+  .slick-dots .slick-active {
+    top: 90%;
+  }
+
+  .into-area {
+    display: none;
+  }
+
+  /* portfolio details */
+  .tags ul li a {
+    font-size: 12px;
+    font-family: 'Nunito',sans-serif;
+    text-align: center;
+    background: #2e2e34;
+    padding: 10px 10px;
+  }
+
+  .blockquote {
+    padding: 30px 40px;
+  }
+
+}
+
+@media only screen and (max-width:479px){
+  .logo-area{
+    padding-left: 15px;
+  }
+
+  .slider-activator .slick-arrow {
+    font-size: 20px;
+  }
+
+  .into-area {
+    display: none;
+  }
+
+  .slick-dots li button {
+    font-size: 20px;
+  }
+
+  .mobile-menu {
+    right: -40px;
+    top: 12px;
+  }
+
+  .slider-area-intro{
+    padding-left: 40px;
+  }
+
+  .header-area .container{
+    margin-top: 20px;
+  }
+
+  /* portfolio details */
+  .tags ul li a{
+    line-height: 40px;
+  }
+
+  .blockquote {
+    padding: 20px 30px;
+    
+  }
+
+  /* blog list */
+  .blog-post-area {
+    padding: 40px 0;
+  }
+  
+  .blog-section .title .dash {
+    width: 30%;
+    left: 70%;
+  }
+
+}
